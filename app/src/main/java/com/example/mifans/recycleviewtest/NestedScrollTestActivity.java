@@ -2,6 +2,7 @@ package com.example.mifans.recycleviewtest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class NestedScrollTestActivity extends AppCompatActivity {
         adapter = new MyAdapter(this,stringList);
         LinearLayoutManager manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
         adapter = new MyAdapter(this,stringList);
         recyclerView.setAdapter(adapter);
 
